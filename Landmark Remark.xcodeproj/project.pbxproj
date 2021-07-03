@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		161E8CA318B07EB30F6232E7 /* Pods_Landmark_Remark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652A7A12DE51D5A8871C8DDB /* Pods_Landmark_Remark.framework */; };
 		1CA25AA2268CAFF6006D1808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA25AA1268CAFF6006D1808 /* AppDelegate.swift */; };
 		1CA25AA4268CAFF6006D1808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA25AA3268CAFF6006D1808 /* SceneDelegate.swift */; };
-		1CA25AA6268CAFF6006D1808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA25AA5268CAFF6006D1808 /* ViewController.swift */; };
 		1CA25AA9268CAFF6006D1808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA25AA7268CAFF6006D1808 /* Main.storyboard */; };
 		1CA25AAB268CAFF7006D1808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA25AAA268CAFF7006D1808 /* Assets.xcassets */; };
 		1CA25AAE268CAFF7006D1808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA25AAC268CAFF7006D1808 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,13 @@
 		1CD8462C268E634700B2DAF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8462B268E634700B2DAF3 /* GoogleService-Info.plist */; };
 		1CD8462D268E634700B2DAF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8462B268E634700B2DAF3 /* GoogleService-Info.plist */; };
 		1CD8462E268E634700B2DAF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8462B268E634700B2DAF3 /* GoogleService-Info.plist */; };
+		1CD84637268E797E00B2DAF3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84636268E797E00B2DAF3 /* UserModel.swift */; };
+		1CD8463A268E79AC00B2DAF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84639268E79AC00B2DAF3 /* LoginViewController.swift */; };
+		1CD8463C268F43EB00B2DAF3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8463B268F43EB00B2DAF3 /* LoginViewModel.swift */; };
+		1CD8463F268F6C5900B2DAF3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8463E268F6C5900B2DAF3 /* APIService.swift */; };
+		1CD84641268FB44100B2DAF3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84640268FB44100B2DAF3 /* MapViewController.swift */; };
+		1CD84643268FBC6700B2DAF3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84642268FBC6700B2DAF3 /* MapViewModel.swift */; };
+		1CD8464526905C1600B2DAF3 /* RemarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464426905C1600B2DAF3 /* RemarkModel.swift */; };
 		7B1C34376131D90013547A77 /* Pods_Landmark_RemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81D1FCAD1CEBC5162720A88 /* Pods_Landmark_RemarkTests.framework */; };
 		8E0F24C59A16BB9EA3C45B81 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CD6AEF9C2372FF40FB9083 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +51,6 @@
 		1CA25A9E268CAFF6006D1808 /* Landmark Remark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Landmark Remark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA25AA1268CAFF6006D1808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CA25AA3268CAFF6006D1808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1CA25AA5268CAFF6006D1808 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1CA25AA8268CAFF6006D1808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CA25AAA268CAFF7006D1808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CA25AAD268CAFF7006D1808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +62,13 @@
 		1CA25AC3268CAFF8006D1808 /* Landmark_RemarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark_RemarkUITests.swift; sourceTree = "<group>"; };
 		1CA25AC5268CAFF8006D1808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CD8462B268E634700B2DAF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1CD84636268E797E00B2DAF3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1CD84639268E79AC00B2DAF3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1CD8463B268F43EB00B2DAF3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = "Landmark Remark/LoginViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		1CD8463E268F6C5900B2DAF3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1CD84640268FB44100B2DAF3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1CD84642268FBC6700B2DAF3 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		1CD8464426905C1600B2DAF3 /* RemarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModel.swift; sourceTree = "<group>"; };
 		349997EEC868149BA956186C /* Pods-Landmark Remark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark Remark.debug.xcconfig"; path = "Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark.debug.xcconfig"; sourceTree = "<group>"; };
 		447F34C647A39D997A6282DE /* Pods-Landmark RemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark RemarkTests.release.xcconfig"; path = "Target Support Files/Pods-Landmark RemarkTests/Pods-Landmark RemarkTests.release.xcconfig"; sourceTree = "<group>"; };
 		652A7A12DE51D5A8871C8DDB /* Pods_Landmark_Remark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmark_Remark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +134,10 @@
 			children = (
 				1CA25AA1268CAFF6006D1808 /* AppDelegate.swift */,
 				1CA25AA3268CAFF6006D1808 /* SceneDelegate.swift */,
-				1CA25AA5268CAFF6006D1808 /* ViewController.swift */,
+				1CD8463E268F6C5900B2DAF3 /* APIService.swift */,
+				1CD84638268E799700B2DAF3 /* Views */,
+				1CD84633268E792B00B2DAF3 /* Models */,
+				1CD8463D268F5A9200B2DAF3 /* ViewModels */,
 				1CA25AA7268CAFF6006D1808 /* Main.storyboard */,
 				1CA25AAA268CAFF7006D1808 /* Assets.xcassets */,
 				1CA25AAC268CAFF7006D1808 /* LaunchScreen.storyboard */,
@@ -148,6 +163,33 @@
 				1CA25AC5268CAFF8006D1808 /* Info.plist */,
 			);
 			path = "Landmark RemarkUITests";
+			sourceTree = "<group>";
+		};
+		1CD84633268E792B00B2DAF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1CD84636268E797E00B2DAF3 /* UserModel.swift */,
+				1CD8464426905C1600B2DAF3 /* RemarkModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1CD84638268E799700B2DAF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1CD84639268E79AC00B2DAF3 /* LoginViewController.swift */,
+				1CD84640268FB44100B2DAF3 /* MapViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1CD8463D268F5A9200B2DAF3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1CD8463B268F43EB00B2DAF3 /* LoginViewModel.swift */,
+				1CD84642268FBC6700B2DAF3 /* MapViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		9D4157D380B37283F2029D51 /* Pods */ = {
@@ -185,6 +227,7 @@
 				1CA25A9B268CAFF6006D1808 /* Frameworks */,
 				1CA25A9C268CAFF6006D1808 /* Resources */,
 				132D11A26D4BA76FE32292B4 /* [CP] Embed Pods Frameworks */,
+				E882863BCAC9D9B5737DD78B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +266,7 @@
 				1CA25ABC268CAFF8006D1808 /* Frameworks */,
 				1CA25ABD268CAFF8006D1808 /* Resources */,
 				A155A574F897FBCA6D7DDAD4 /* [CP] Embed Pods Frameworks */,
+				5CFF8922FCB0F18043204DD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +369,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5CFF8922FCB0F18043204DD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark-Landmark RemarkUITests/Pods-Landmark Remark-Landmark RemarkUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark-Landmark RemarkUITests/Pods-Landmark Remark-Landmark RemarkUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark-Landmark RemarkUITests/Pods-Landmark Remark-Landmark RemarkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6DCCFE85C3D185C30B7ABAD9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +469,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E882863BCAC9D9B5737DD78B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -415,9 +493,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA25AA6268CAFF6006D1808 /* ViewController.swift in Sources */,
+				1CD8463A268E79AC00B2DAF3 /* LoginViewController.swift in Sources */,
+				1CD84637268E797E00B2DAF3 /* UserModel.swift in Sources */,
 				1CA25AA2268CAFF6006D1808 /* AppDelegate.swift in Sources */,
+				1CD8463C268F43EB00B2DAF3 /* LoginViewModel.swift in Sources */,
+				1CD8463F268F6C5900B2DAF3 /* APIService.swift in Sources */,
 				1CA25AA4268CAFF6006D1808 /* SceneDelegate.swift in Sources */,
+				1CD8464526905C1600B2DAF3 /* RemarkModel.swift in Sources */,
+				1CD84641268FB44100B2DAF3 /* MapViewController.swift in Sources */,
+				1CD84643268FBC6700B2DAF3 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Landmark Remark/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,6 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Landmark Remark/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

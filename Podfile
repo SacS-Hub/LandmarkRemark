@@ -7,6 +7,8 @@ target 'Landmark Remark' do
 
   # Pods for Landmark Remark
   pod 'Firebase/Auth'
+  pod 'FirebaseUI'
+
   
   
 
