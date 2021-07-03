@@ -64,26 +64,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-ww-nMA">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-ww-nMA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cCf-n7-Vo9">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cCf-n7-Vo9">
+                                <rect key="frame" x="0.0" y="139" width="414" height="757"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tdZ-5i-pZI" id="pK4-Yc-N40"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BnP-3a-ws4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BnP-3a-ws4" firstAttribute="trailing" secondItem="ryY-ww-nMA" secondAttribute="trailing" id="3DT-80-NWa"/>
+                            <constraint firstItem="cCf-n7-Vo9" firstAttribute="bottom" secondItem="BnP-3a-ws4" secondAttribute="bottom" constant="34" id="4I6-Hf-397"/>
+                            <constraint firstItem="cCf-n7-Vo9" firstAttribute="leading" secondItem="BnP-3a-ws4" secondAttribute="leading" id="8Lw-Cg-zmb"/>
+                            <constraint firstItem="cCf-n7-Vo9" firstAttribute="top" secondItem="ryY-ww-nMA" secondAttribute="top" constant="51" id="a8B-WM-8xD"/>
+                            <constraint firstItem="BnP-3a-ws4" firstAttribute="trailing" secondItem="cCf-n7-Vo9" secondAttribute="trailing" id="cqN-i6-GjG"/>
+                            <constraint firstItem="ryY-ww-nMA" firstAttribute="leading" secondItem="BnP-3a-ws4" secondAttribute="leading" id="dZ1-9B-VNv"/>
+                            <constraint firstItem="ryY-ww-nMA" firstAttribute="top" secondItem="BnP-3a-ws4" secondAttribute="top" id="g2B-Ak-Itc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Landmarks" id="dcY-GJ-oLw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="aO8-UP-C2y"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="aO8-UP-C2y">
+                            <connections>
+                                <action selector="logoutAction:" destination="tdZ-5i-pZI" id="jWG-ex-8bJ"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="compose" id="r1I-uH-pEs"/>
-                            <barButtonItem systemItem="organize" id="LIa-sS-voW"/>
+                            <barButtonItem systemItem="compose" id="r1I-uH-pEs">
+                                <connections>
+                                    <action selector="addRemark:" destination="tdZ-5i-pZI" id="iGH-YU-xFs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="LIa-sS-voW">
+                                <connections>
+                                    <action selector="showRemarkList:" destination="tdZ-5i-pZI" id="6ou-zI-7yW"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="cCf-n7-Vo9" id="Dym-gr-AgX"/>
+                        <outlet property="searchBar" destination="ryY-ww-nMA" id="jKZ-MJ-jSV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wu7-e5-eoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

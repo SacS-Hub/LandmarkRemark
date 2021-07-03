@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "02B84729-7CF0-4A99-9152-469FD75CABD0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "login(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "317CBA8F-1801-48ED-9FB5-2DCBA2136FD8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewModel.swift"
@@ -36,11 +36,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "317CBA8F-1801-48ED-9FB5-2DCBA2136FD8 - cb7876c49ffd155f"
+                  uuid = "317CBA8F-1801-48ED-9FB5-2DCBA2136FD8 - 7f135ebb05627fa5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Landmark_Remark.LoginViewModel.login(landmarkUser: Landmark_Remark.Landmark, completion: (Swift.Optional&lt;Landmark_Remark.Landmark&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Landmark_Remark.LoginViewModel.login(landmarkUser: Landmark_Remark.User, completion: (Swift.Optional&lt;Landmark_Remark.User&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Landmark Remark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/LoginViewModel.swift"
@@ -48,14 +48,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "65">
                </Location>
                <Location
-                  uuid = "317CBA8F-1801-48ED-9FB5-2DCBA2136FD8 - f14fe8aeed592427"
+                  uuid = "317CBA8F-1801-48ED-9FB5-2DCBA2136FD8 - c4d9c58b476ab2c3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.Landmark&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; () in Landmark_Remark.LoginViewModel.login(landmarkUser: Landmark_Remark.Landmark, completion: (Swift.Optional&lt;Landmark_Remark.Landmark&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.User&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; () in Landmark_Remark.LoginViewModel.login(landmarkUser: Landmark_Remark.User, completion: (Swift.Optional&lt;Landmark_Remark.User&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Landmark Remark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/LoginViewModel.swift"
@@ -63,7 +63,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "295">
+                  offsetFromSymbolStart = "225">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A23ECBC6-97CE-40B0-8923-D6B4392370A6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewController.swift"
@@ -136,7 +136,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9D062741-B155-45D5-B55B-02398C3B6E88"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewController.swift"
@@ -160,14 +160,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "1097">
+                  offsetFromSymbolStart = "1151">
                </Location>
                <Location
-                  uuid = "9D062741-B155-45D5-B55B-02398C3B6E88 - 3c49c11753c7f02c"
+                  uuid = "9D062741-B155-45D5-B55B-02398C3B6E88 - 2addd9c87af204fa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Landmark_Remark.Landmark&gt;) -&gt; () in Landmark_Remark.LoginViewController.authUI(_: __C.FUIAuth, didSignInWith: Swift.Optional&lt;__C.FIRAuthDataResult&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Landmark_Remark.User&gt;) -&gt; () in Landmark_Remark.LoginViewController.authUI(_: __C.FUIAuth, didSignInWith: Swift.Optional&lt;__C.FIRAuthDataResult&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
                   moduleName = "Landmark Remark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/LoginViewController.swift"
@@ -175,7 +175,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "147">
+                  offsetFromSymbolStart = "199">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -184,38 +184,38 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "63C3AFDF-BB41-4E91-9912-278B37202EB9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "63C3AFDF-BB41-4E91-9912-278B37202EB9 - 6bc07a54b6392411"
+                  uuid = "63C3AFDF-BB41-4E91-9912-278B37202EB9 - 9ead531af3aec5b0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Landmark_Remark.FirebaseAPIService.fetchUserLandmark(completion: (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.Landmark&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Landmark_Remark.FirebaseAPIService.fetchUserLandmark(completion: (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.User&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Landmark Remark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "38">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "35">
                </Location>
                <Location
-                  uuid = "63C3AFDF-BB41-4E91-9912-278B37202EB9 - 4b1b9d0f07b1e148"
+                  uuid = "63C3AFDF-BB41-4E91-9912-278B37202EB9 - 322e4ca4548de11"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Landmark_Remark.FirebaseAPIService.fetchUserLandmark(completion: (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.Landmark&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Landmark_Remark.FirebaseAPIService.fetchUserLandmark(completion: (Swift.Result&lt;Swift.Array&lt;Landmark_Remark.User&gt;, Landmark_Remark.FirebaseDBError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Landmark Remark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
@@ -223,7 +223,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
                   endingLineNumber = "34"
-                  offsetFromSymbolStart = "264">
+                  offsetFromSymbolStart = "269">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -232,15 +232,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F3F02AC5-8258-4BF1-A37A-8B5454ACE75E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -254,9 +254,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "saveUserLandmark(landmarkUser:completion:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -270,9 +270,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -280,14 +280,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1DE5B3B7-AE03-4024-8DD2-5844F4F8CA42"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "login(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,9 +302,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -312,14 +312,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0FB7E8D-40B6-47F5-8733-9C4845CB4A87"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "login(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +334,8 @@
             filePath = "Landmark Remark/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "login(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,9 +350,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "saveUserLandmark(landmarkUser:completion:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -366,9 +366,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "saveUserLandmark(landmarkUser:completion:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -376,15 +376,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8014C6E3-024F-4D1A-83A6-A7E4C4E86AAC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -456,15 +456,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "060B2775-737C-4B93-95D3-4CB031EAFDB1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "fetchUserLandmark(completion:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -472,7 +472,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "315AAB03-1135-42E0-BCB3-0E90C159F5DD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewController.swift"
@@ -494,9 +494,121 @@
             filePath = "Landmark Remark/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "login(landmarkUser:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "410F5A82-E30D-4056-9815-4D5598D18F42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "configureLocationManager()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEFBB161-6192-47C4-A2E9-1C718B05470A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58FB03DD-776D-4C05-A79B-B51C599D68E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "877D37B9-088C-4DFA-9A11-222E1F4F6FDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D3A0997-9FFA-4D71-BC92-61DADB2658C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44C6AEEF-5CAB-438D-B27D-02B1C81F2BDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "locationManager"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53EDE33A-6B1D-48D8-BA90-77A944352B4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setMapRegion(location:distance:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

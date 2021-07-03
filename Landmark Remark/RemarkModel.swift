@@ -14,11 +14,11 @@ struct Remark {
     let message: String
     let latitude: Double
     let longitude: Double
-    let date: Date
+    let date: String
     let distance: Double
     let user: User
     
-    init (remarkId: String, message: String, latitude: Double, longitude: Double, date: Date, distance: Double, user: User){
+    init (remarkId: String, message: String, latitude: Double, longitude: Double, date: String, distance: Double, user: User){
         
         self.remarkId = remarkId
         self.message =  message
@@ -27,5 +27,32 @@ struct Remark {
         self.date = date
         self.distance = distance
         self.user = user
+    }
+    
+    init?(dictionary: [String: Any?]) {
+        
+        guard let remarkId = dictionary["remarkId"] as? String,
+              let message = dictionary["message"] as? String,
+              let latitude = dictionary["latitude"] as? Double,
+              let longitude = dictionary["longitude"] as? Double,
+              let date = dictionary["date"] as? String,
+              let distance = dictionary["distance"] as? Double,
+              let user = dictionary["user"] as? User
+            else {
+                return nil
+        }
+        
+        self.init(remarkId: remarkId, message: message, latitude: latitude, longitude: longitude, date: date, distance: distance, user: user)
+    }
+    
+    func remarkDict() -> [String:Any?]{
+        return [ "remarkId": remarkId,
+                 "message": message,
+                 "latitude": latitude,
+                 "longitude": longitude,
+                 "date": date,
+                 "distance": distance,
+                 "user": user
+               ]
     }
 }

@@ -11,8 +11,11 @@ import FirebaseDatabase
 
 protocol FirebaseAPIServiceProtocol {
     
-    func fetchUserLandmark(completion: @escaping (Result<[User], FirebaseDBError>) -> Void )
-    func saveUserLandmark(landmarkUser: User, completion: @escaping (Result<User, Error>) -> Void )
+    func fetchLandmarkUsers(completion: @escaping (Result<[User], FirebaseDBError>) -> Void )
+    func saveLandmarkUser(landmarkUser: User, completion: @escaping (Result<User, Error>) -> Void )
+    
+    func fetchAllRemarksFromFirebase(completion: @escaping (Result<[Remark], FirebaseDBError>) -> Void )
+    func saveUserRemark(landmarkRemark: Remark, completion: @escaping (Result<Remark, Error>) -> Void )
 
 }
 
@@ -22,14 +25,15 @@ enum FirebaseDBError: Error {
 
 class FirebaseAPIService: FirebaseAPIServiceProtocol {
     
-    var dbRef: DatabaseReference = Database.database().reference(withPath: "landmark")
+    var dbUserRef: DatabaseReference = Database.database().reference(withPath: "landmarkUsers")
+    var dbRemarkRef: DatabaseReference = Database.database().reference(withPath: "landmarkRemarks")
 
     
-    func fetchUserLandmark(completion: @escaping (Result<[User], FirebaseDBError>) -> Void ){
+    func fetchLandmarkUsers(completion: @escaping (Result<[User], FirebaseDBError>) -> Void ){
         
         
 //        dbRef.observe(.value, with: { (snapshot) in
-        dbRef.observeSingleEvent (of: .value, with: { snapshot in
+        dbUserRef.observeSingleEvent (of: .value, with: { snapshot in
             
             guard snapshot.value != nil else { completion(.failure(.noData)); return}
             
@@ -52,9 +56,9 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
         
     }
     
-    func saveUserLandmark(landmarkUser: User, completion: @escaping (Result<User, Error>) -> Void ){
+    func saveLandmarkUser(landmarkUser: User, completion: @escaping (Result<User, Error>) -> Void ){
         
-        let  child = self.dbRef.childByAutoId()
+        let  child = self.dbUserRef.childByAutoId()
         child.setValue(landmarkUser.userDict()) { (error, reference) in
             if (error != nil){
                 completion(.failure(error!))
@@ -62,5 +66,22 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
             completion(.success(landmarkUser))
         }
     }
+    
+    func fetchAllRemarksFromFirebase(completion: @escaping (Result<[Remark], FirebaseDBError>) -> Void ) {
+        
+    }
+    
+    func saveUserRemark(landmarkRemark: Remark, completion: @escaping (Result<Remark, Error>) -> Void ) {
+        
+        let  child = self.dbRemarkRef.childByAutoId()
+        child.setValue(landmarkRemark.remarkDict()) { (error, reference) in
+            if (error != nil){
+                completion(.failure(error!))
+            }
+            completion(.success(landmarkRemark))
+        }
+        
+    }
+
 
 }

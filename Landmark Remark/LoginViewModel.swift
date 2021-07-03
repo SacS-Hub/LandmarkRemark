@@ -22,19 +22,20 @@ final class LoginViewModel {
     
     func login(landmarkUser: User, completion: @escaping (_ landmarkUser: User?) -> Void){
         
-        apiService.fetchUserLandmark(completion: ({ [weak self] result in
+        apiService.fetchLandmarkUsers(completion: ({ [weak self] result in
+            guard let self = self else {return}
             
             switch result {
             case .success(let response):
-                    self?.userArray = response
+                    self.userArray = response
                     
-                let existingUser = self!.userArray.map{
+                let existingUser = self.userArray.map{
                     $0.userId == landmarkUser.userId
                 }
                 
                 if existingUser.count == 0 {
                     
-                    self!.apiService.saveUserLandmark(landmarkUser: landmarkUser, completion: ({ [weak self] result in
+                    self.apiService.saveLandmarkUser(landmarkUser: landmarkUser, completion: ({ [weak self] result in
                         
                         switch result {
                         
@@ -50,9 +51,9 @@ final class LoginViewModel {
                 }
                 else {
 
-                    self!.currentLandmarkUser = landmarkUser
+                    self.currentLandmarkUser = landmarkUser
                     print("no landmark found")
-                    completion(self!.currentLandmarkUser)
+                    completion(self.currentLandmarkUser)
                 }
                 
                 
