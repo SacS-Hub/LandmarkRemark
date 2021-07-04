@@ -25,8 +25,8 @@ enum FirebaseDBError: Error {
 
 class FirebaseAPIService: FirebaseAPIServiceProtocol {
     
-    var dbUserRef: DatabaseReference = Database.database().reference(withPath: "landmarkUsers")
-    var dbRemarkRef: DatabaseReference = Database.database().reference(withPath: "landmarkRemarks")
+    var dbUserRef: DatabaseReference = Database.database().reference(withPath: StringConstants.FirebaseUserDBRef)
+    var dbRemarkRef: DatabaseReference = Database.database().reference(withPath: StringConstants.FirebaseRemarkDBRef)
 
     
     func fetchLandmarkUsers(completion: @escaping (Result<[User], FirebaseDBError>) -> Void ){
@@ -69,11 +69,35 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
     
     func fetchAllRemarksFromFirebase(completion: @escaping (Result<[Remark], FirebaseDBError>) -> Void ) {
         
+        dbRemarkRef.observeSingleEvent (of: .value, with: { snapshot in
+            
+            guard snapshot.value != nil else { completion(.failure(.noData)); return}
+            
+            var landmarkRemarkArr: [Remark] = []
+            
+            if snapshot.children.allObjects.count == 0{
+                completion(.success(landmarkRemarkArr))
+
+            }
+            #warning("else condition and completion outside for")
+            for child in (snapshot.children.allObjects as? [DataSnapshot])! {
+                if let value = child.value as? [String: AnyObject],
+                   let landmarkRemark = Remark(dictionary: value) {
+                    landmarkRemarkArr.append(landmarkRemark)
+                        completion(.success(landmarkRemarkArr))
+                }
+            }
+            
+        })
+
+        
     }
     
     func saveUserRemark(landmarkRemark: Remark, completion: @escaping (Result<Remark, Error>) -> Void ) {
         
         let  child = self.dbRemarkRef.childByAutoId()
+        
+        print("\(landmarkRemark.remarkDict())")
         child.setValue(landmarkRemark.remarkDict()) { (error, reference) in
             if (error != nil){
                 completion(.failure(error!))

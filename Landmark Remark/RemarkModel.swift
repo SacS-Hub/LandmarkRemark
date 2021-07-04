@@ -10,7 +10,7 @@ import Foundation
 
 struct Remark {
     
-    let remarkId: String
+    let remarkId: String?
     let message: String
     let latitude: Double
     let longitude: Double
@@ -37,7 +37,7 @@ struct Remark {
               let longitude = dictionary["longitude"] as? Double,
               let date = dictionary["date"] as? String,
               let distance = dictionary["distance"] as? Double,
-              let user = dictionary["user"] as? User
+              let user = User.init(dictionary:(dictionary["user"] as? [String : Any?])!)
             else {
                 return nil
         }
@@ -52,7 +52,7 @@ struct Remark {
                  "longitude": longitude,
                  "date": date,
                  "distance": distance,
-                 "user": user
+                 "user": user.userDict()
                ]
     }
 }

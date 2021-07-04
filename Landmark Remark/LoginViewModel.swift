@@ -12,7 +12,7 @@ final class LoginViewModel {
     
     var userArray: [User] = [User]()
     let apiService: FirebaseAPIServiceProtocol
-    var currentLandmarkUser: User?
+    public var currentLandmarkUser: User?
     
     
     init(apiService: FirebaseAPIServiceProtocol = FirebaseAPIService()) {

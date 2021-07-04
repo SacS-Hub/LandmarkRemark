@@ -26,6 +26,9 @@
 		1CD84643268FBC6700B2DAF3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84642268FBC6700B2DAF3 /* MapViewModel.swift */; };
 		1CD8464526905C1600B2DAF3 /* RemarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464426905C1600B2DAF3 /* RemarkModel.swift */; };
 		1CD846472690AD2A00B2DAF3 /* AnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD846462690AD2900B2DAF3 /* AnnotationModel.swift */; };
+		1CD8464A2690D8AF00B2DAF3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD846492690D8AF00B2DAF3 /* Utils.swift */; };
+		1CD8464C2690ECB800B2DAF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464B2690ECB800B2DAF3 /* Constants.swift */; };
+		1CD8464E2691DAFE00B2DAF3 /* RemarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */; };
 		7B1C34376131D90013547A77 /* Pods_Landmark_RemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81D1FCAD1CEBC5162720A88 /* Pods_Landmark_RemarkTests.framework */; };
 		8E0F24C59A16BB9EA3C45B81 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CD6AEF9C2372FF40FB9083 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +74,9 @@
 		1CD84642268FBC6700B2DAF3 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		1CD8464426905C1600B2DAF3 /* RemarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModel.swift; sourceTree = "<group>"; };
 		1CD846462690AD2900B2DAF3 /* AnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationModel.swift; sourceTree = "<group>"; };
+		1CD846492690D8AF00B2DAF3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1CD8464B2690ECB800B2DAF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkTableViewCell.swift; sourceTree = "<group>"; };
 		349997EEC868149BA956186C /* Pods-Landmark Remark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark Remark.debug.xcconfig"; path = "Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark.debug.xcconfig"; sourceTree = "<group>"; };
 		447F34C647A39D997A6282DE /* Pods-Landmark RemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark RemarkTests.release.xcconfig"; path = "Target Support Files/Pods-Landmark RemarkTests/Pods-Landmark RemarkTests.release.xcconfig"; sourceTree = "<group>"; };
 		652A7A12DE51D5A8871C8DDB /* Pods_Landmark_Remark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmark_Remark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,8 @@
 			children = (
 				1CA25AA1268CAFF6006D1808 /* AppDelegate.swift */,
 				1CA25AA3268CAFF6006D1808 /* SceneDelegate.swift */,
+				1CD846492690D8AF00B2DAF3 /* Utils.swift */,
+				1CD8464B2690ECB800B2DAF3 /* Constants.swift */,
 				1CD846482690CCF200B2DAF3 /* Services */,
 				1CD84638268E799700B2DAF3 /* Views */,
 				1CD84633268E792B00B2DAF3 /* Models */,
@@ -182,6 +190,7 @@
 			children = (
 				1CD84639268E79AC00B2DAF3 /* LoginViewController.swift */,
 				1CD84640268FB44100B2DAF3 /* MapViewController.swift */,
+				1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -511,7 +520,10 @@
 				1CD846472690AD2A00B2DAF3 /* AnnotationModel.swift in Sources */,
 				1CD8463F268F6C5900B2DAF3 /* APIService.swift in Sources */,
 				1CA25AA4268CAFF6006D1808 /* SceneDelegate.swift in Sources */,
+				1CD8464A2690D8AF00B2DAF3 /* Utils.swift in Sources */,
+				1CD8464C2690ECB800B2DAF3 /* Constants.swift in Sources */,
 				1CD8464526905C1600B2DAF3 /* RemarkModel.swift in Sources */,
+				1CD8464E2691DAFE00B2DAF3 /* RemarkTableViewCell.swift in Sources */,
 				1CD84641268FB44100B2DAF3 /* MapViewController.swift in Sources */,
 				1CD84643268FBC6700B2DAF3 /* MapViewModel.swift in Sources */,
 			);

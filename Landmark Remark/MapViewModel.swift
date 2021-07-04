@@ -27,7 +27,7 @@ final class MapViewModel {
         self.apiService = apiService
     }
 
-    func getAllRemarks(completion: @escaping (_ Landmark_Remark: Remark?) -> Void){
+    func getAllRemarks(){
         
         apiService.fetchAllRemarksFromFirebase(completion: ({ [weak self] result in
             guard let self = self else {return}
@@ -36,15 +36,15 @@ final class MapViewModel {
             case .success(let response):
                 self.remarksArray = response
                 self.delegate?.remarksFetchedWithSuccess(true)
-                print("success")
+                print("all remark success")
             case .failure(let error):
                 self.delegate?.operationFailedWithError(error.localizedDescription)
-                print("error")
+                print("all remark error")
             }}))
     
     }
     
-    func saveUserRemark (landmarkRemark: Remark, completion: @escaping (_ landmarkUser: Remark?) -> Void) {
+    func addUserRemark (landmarkRemark: Remark) {
         
         apiService.saveUserRemark(landmarkRemark: landmarkRemark, completion: ({ [weak self] result in
             guard let self = self else {return}
@@ -54,10 +54,10 @@ final class MapViewModel {
             case .success(let response):
                 self.remarksArray.append(response)
                 self.delegate?.remarkSavedWithSuccess(response)
-                print("success")
+                print("add remark success")
             case .failure(let error):
                 self.delegate?.operationFailedWithError(error.localizedDescription)
-                print("error")
+                print("add remark error")
             }
         }))
     }

@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
         if segue.identifier == "ShowMapView"{
                 let mapViewCtlr = segue.destination as! MapViewController
                 mapViewCtlr.mapViewModel = MapViewModel()
+            mapViewCtlr.currentUser = loginViewModel.currentLandmarkUser
             }
     }
 }
@@ -64,10 +65,11 @@ extension LoginViewController: FUIAuthDelegate {
             let landmarkUser:User = User.init(userId: user.uid, username: user.displayName!)
             
             loginViewModel.login(landmarkUser: landmarkUser, completion: {[weak self] landmark in
+                guard let self = self else {return}
                 
                 print("\(String(describing: landmark))")
                 if landmark != nil {
-                    self?.performSegue(withIdentifier: "ShowMapView", sender: nil)
+                    self.performSegue(withIdentifier: "ShowMapView", sender: nil)
                 }
                 
             })

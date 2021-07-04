@@ -25,7 +25,7 @@ class AnnotationCustomModel: MKPointAnnotation {
     
     convenience init?(remark: Remark){
         
-        self.init(title: remark.user.username, subtitle: remark.message, coordinate: CLLocationCoordinate2D.init(latitude: remark.latitude, longitude: remark.longitude), remark: remark)
+        self.init(title: remark.message, subtitle:String(format: "by:@%@, %f", Utilities.trimSpaceFromString(string: remark.user.username).lowercased(), remark.distance) , coordinate: CLLocationCoordinate2D.init(latitude: remark.latitude, longitude: remark.longitude), remark: remark)
     }
     
 }
