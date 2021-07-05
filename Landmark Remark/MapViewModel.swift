@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 protocol RemarksDelegates: AnyObject {
     
@@ -62,5 +63,10 @@ final class MapViewModel {
         }))
     }
     
+    func logout(){
+        
+        //Logout Firebase User
+        try! Auth.auth().signOut()
 
+    }
 }

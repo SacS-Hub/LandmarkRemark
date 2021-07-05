@@ -27,11 +27,11 @@ final class LoginViewModel {
             
             switch result {
             case .success(let response):
-                    self.userArray = response
+                self.userArray = response
                     
-                let existingUser = self.userArray.map{
+                let existingUser = self.userArray.filter({
                     $0.userId == landmarkUser.userId
-                }
+                })
                 
                 if existingUser.count == 0 {
                     

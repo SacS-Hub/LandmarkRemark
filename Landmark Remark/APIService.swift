@@ -43,13 +43,16 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
                 completion(.success(landmarkUserArr))
 
             }
-            
-            for child in (snapshot.children.allObjects as? [DataSnapshot])! {
-                if let value = child.value as? [String: AnyObject],
-                   let landmarkUser = User(dictionary: value) {
-                    landmarkUserArr.append(landmarkUser)
-                        completion(.success(landmarkUserArr))
+            else {
+                
+                for child in (snapshot.children.allObjects as? [DataSnapshot])! {
+                    if let value = child.value as? [String: AnyObject],
+                       let landmarkUser = User(dictionary: value) {
+                        landmarkUserArr.append(landmarkUser)
+                        
+                    }
                 }
+                completion(.success(landmarkUserArr))
             }
             
         })
@@ -79,15 +82,16 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
                 completion(.success(landmarkRemarkArr))
 
             }
-            #warning("else condition and completion outside for")
-            for child in (snapshot.children.allObjects as? [DataSnapshot])! {
-                if let value = child.value as? [String: AnyObject],
-                   let landmarkRemark = Remark(dictionary: value) {
-                    landmarkRemarkArr.append(landmarkRemark)
-                        completion(.success(landmarkRemarkArr))
+            else {
+                for child in (snapshot.children.allObjects as? [DataSnapshot])! {
+                    if let value = child.value as? [String: AnyObject],
+                       let landmarkRemark = Remark(dictionary: value) {
+                        landmarkRemarkArr.append(landmarkRemark)
+                    }
                 }
+                completion(.success(landmarkRemarkArr))
+
             }
-            
         })
 
         

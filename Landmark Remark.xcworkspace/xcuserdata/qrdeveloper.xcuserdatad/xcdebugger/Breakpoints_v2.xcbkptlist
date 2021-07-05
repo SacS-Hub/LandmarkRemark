@@ -78,8 +78,8 @@
             filePath = "Landmark Remark/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "authUI(_:didSignInWith:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Landmark Remark/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "authUI(_:didSignInWith:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "Landmark Remark/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "authUI(_:didSignInWith:error:)"
             landmarkType = "7">
             <Locations>
@@ -254,8 +254,8 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -263,24 +263,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F48A73F9-09D1-4A37-8250-E7DB2A4A6CB9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "fetchLandmarkUsers(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1DE5B3B7-AE03-4024-8DD2-5844F4F8CA42"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/LoginViewModel.swift"
@@ -350,8 +334,8 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -366,25 +350,9 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "saveLandmarkUser(landmarkUser:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8014C6E3-024F-4D1A-83A6-A7E4C4E86AAC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "fetchLandmarkUsers(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -455,22 +423,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "060B2775-737C-4B93-95D3-4CB031EAFDB1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "fetchLandmarkUsers(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "315AAB03-1135-42E0-BCB3-0E90C159F5DD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -478,8 +430,8 @@
             filePath = "Landmark Remark/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "authUI(_:didSignInWith:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -510,8 +462,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "configureLocationManager()"
             landmarkType = "7">
          </BreakpointContent>
@@ -526,8 +478,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "locationManager(_:didChangeAuthorization:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -542,8 +494,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -558,8 +510,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "locationManager(_:didFailWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,8 +526,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "locationManager(_:didChangeAuthorization:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -590,8 +542,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "locationManager"
             landmarkType = "24">
          </BreakpointContent>
@@ -606,8 +558,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "setMapRegion(location:distance:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -622,8 +574,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addRemark(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,8 +590,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "plotRemarksOnMap(remarks:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -654,8 +606,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "startLocationUpdates()"
             landmarkType = "7">
          </BreakpointContent>
@@ -670,8 +622,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "stopLocationUpdates()"
             landmarkType = "7">
          </BreakpointContent>
@@ -686,8 +638,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "remarksFetchedWithSuccess(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -702,8 +654,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "remarkSavedWithSuccess(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,8 +670,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "operationFailedWithError(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -734,8 +686,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -750,13 +702,13 @@
             filePath = "Landmark Remark/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "getAllRemarks()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9FD43EC1-5E6D-4147-BA94-BD25926BCB4C - b92282fb488933b3"
+                  uuid = "9FD43EC1-5E6D-4147-BA94-BD25926BCB4C - b92282fb48893392"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -766,12 +718,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "25">
                </Location>
                <Location
-                  uuid = "9FD43EC1-5E6D-4147-BA94-BD25926BCB4C - 62f81cc56ee33678"
+                  uuid = "9FD43EC1-5E6D-4147-BA94-BD25926BCB4C - 62f81cc56ee33659"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -781,8 +733,8 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "192">
                </Location>
             </Locations>
@@ -798,8 +750,8 @@
             filePath = "Landmark Remark/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "getAllRemarks()"
             landmarkType = "7">
          </BreakpointContent>
@@ -814,13 +766,13 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "fetchAllRemarksFromFirebase(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "690041B4-7B32-41D4-A2E4-DA18DB036BA2 - 90c285e98d1df2dd"
+                  uuid = "690041B4-7B32-41D4-A2E4-DA18DB036BA2 - 90c285e98d1df240"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -830,12 +782,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
                   offsetFromSymbolStart = "35">
                </Location>
                <Location
-                  uuid = "690041B4-7B32-41D4-A2E4-DA18DB036BA2 - 1825d8598a146179"
+                  uuid = "690041B4-7B32-41D4-A2E4-DA18DB036BA2 - 1825d8598a1460e4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -845,27 +797,11 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
                   offsetFromSymbolStart = "264">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3FD473F1-44B9-478C-8902-0B1E8143333F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "fetchAllRemarksFromFirebase(completion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -878,8 +814,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "configureRemarkView(userTitle:subTitle:remarkId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -894,8 +830,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "configureRemarkView(userTitle:subTitle:remarkId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -910,13 +846,13 @@
             filePath = "Landmark Remark/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "addUserRemark(landmarkRemark:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E946A64C-1707-4536-9BEF-04FEC32900DA - 29558264676e973d"
+                  uuid = "E946A64C-1707-4536-9BEF-04FEC32900DA - 29558264676e9712"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -926,12 +862,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
                   offsetFromSymbolStart = "37">
                </Location>
                <Location
-                  uuid = "E946A64C-1707-4536-9BEF-04FEC32900DA - 1e36d7362a1a71cc"
+                  uuid = "E946A64C-1707-4536-9BEF-04FEC32900DA - 1e36d7362a1a71e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -941,8 +877,8 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
                   offsetFromSymbolStart = "180">
                </Location>
             </Locations>
@@ -958,8 +894,8 @@
             filePath = "Landmark Remark/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "addUserRemark(landmarkRemark:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -974,13 +910,13 @@
             filePath = "Landmark Remark/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "saveUserRemark(landmarkRemark:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4524EA1A-4428-4788-A504-9ADD32AFABEE - 70fb2ba9bde6a5cf"
+                  uuid = "4524EA1A-4428-4788-A504-9ADD32AFABEE - 70fb2ba9bde6a54b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -990,12 +926,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
                   offsetFromSymbolStart = "746">
                </Location>
                <Location
-                  uuid = "4524EA1A-4428-4788-A504-9ADD32AFABEE - 5e994ef14b5a5126"
+                  uuid = "4524EA1A-4428-4788-A504-9ADD32AFABEE - 5e994ef14b5a51a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1005,8 +941,8 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
                   offsetFromSymbolStart = "462">
                </Location>
             </Locations>
@@ -1038,25 +974,9 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "mapView(_:viewFor:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73E3DD10-4601-426C-8043-1C12D8796051"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "fetchAllRemarksFromFirebase(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1070,8 +990,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "remarksFetchedWithSuccess(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1080,22 +1000,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2CA1712D-C18B-49BE-8D88-FF1851078027"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmark Remark/MapViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "plotRemarksOnMap(remarks:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "01C2E019-DD98-482E-9044-A3BE274A9964"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1118,8 +1022,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "showAddedRemarkOnMap(remark:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1134,8 +1038,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1144,14 +1048,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D7E550AA-E0C4-4076-92E3-AE99F57B474B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1160,7 +1064,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "657F8FEC-4E23-4FD5-9314-9D0BDC3EAB0C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/RemarkTableViewCell.swift"
@@ -1176,14 +1080,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6D89A17E-CA66-4CDE-9F2D-F97C7202D994"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1198,8 +1102,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1214,8 +1118,8 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "filterRemarks(byUser:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1230,13 +1134,13 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "filterRemarks(byUser:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "02A0B962-BA65-4AF4-8CC2-F2916A8BE40C - da5a16093e051f41"
+                  uuid = "02A0B962-BA65-4AF4-8CC2-F2916A8BE40C - da5a16093e0515b7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1246,12 +1150,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "315"
-                  endingLineNumber = "315"
+                  startingLineNumber = "365"
+                  endingLineNumber = "365"
                   offsetFromSymbolStart = "695">
                </Location>
                <Location
-                  uuid = "02A0B962-BA65-4AF4-8CC2-F2916A8BE40C - f1a3466e38dc2032"
+                  uuid = "02A0B962-BA65-4AF4-8CC2-F2916A8BE40C - f1a3466e38dc2b80"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1261,8 +1165,8 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "318"
-                  endingLineNumber = "318"
+                  startingLineNumber = "368"
+                  endingLineNumber = "368"
                   offsetFromSymbolStart = "205">
                </Location>
             </Locations>
@@ -1272,14 +1176,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "37E0BE62-5772-47CE-B381-B3EA63DB3D0E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "filterRemarks(byUser:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1294,13 +1198,13 @@
             filePath = "Landmark Remark/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "filterRemarks(byUser:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CF7330DC-387C-4380-B557-6ADE4E44B0DB - da5a16093e0511d5"
+                  uuid = "CF7330DC-387C-4380-B557-6ADE4E44B0DB - da5a16093e05165b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1310,12 +1214,12 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "335"
-                  endingLineNumber = "335"
+                  startingLineNumber = "385"
+                  endingLineNumber = "385"
                   offsetFromSymbolStart = "1617">
                </Location>
                <Location
-                  uuid = "CF7330DC-387C-4380-B557-6ADE4E44B0DB - ae8f080c4e139461"
+                  uuid = "CF7330DC-387C-4380-B557-6ADE4E44B0DB - ae8f080c4e1393ef"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1325,11 +1229,59 @@
                   urlString = "file:///Users/qrdeveloper/Desktop/Sachin/Landmark%20Remark/Landmark%20Remark/MapViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "336"
-                  endingLineNumber = "336"
+                  startingLineNumber = "386"
+                  endingLineNumber = "386"
                   offsetFromSymbolStart = "163">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E073AC3E-B4C3-4BE0-90DA-7E869EE45A67"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "mapView(_:viewFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B21AA18-9EBE-483A-8B7B-2D72E247DC78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "mapView(_:viewFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90982080-6746-47DE-BE16-473D2B6C568D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmark Remark/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "logoutAction(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

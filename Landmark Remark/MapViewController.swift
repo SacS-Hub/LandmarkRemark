@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import FirebaseUI
 
 class MapViewController: UIViewController {
     
@@ -66,17 +67,28 @@ class MapViewController: UIViewController {
     
     @IBAction func logoutAction(_ sender: Any) {
         
+        let alert = UIAlertController.init(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { [weak self] (UIAlertAction) in
+            self!.mapViewModel.logout()
+            self!.mapView.removeAnnotations(self!.mapView.annotations)
+            
+            self?.navigationController?.popViewController(animated: true)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func addRemark(_ sender: Any) {
         
-        configureRemarkView(userTitle:currentUser!.username, subTitle: StringConstants.AddRemarkSubtitle, remarkId: "")
+        configureRemarkView(userTitle:"Hi \(currentUser!.username)!", subTitle: StringConstants.AddRemarkSubtitle, remarkId: "")
     }
     
     @IBAction func showMyRemarksAction(_ sender: Any) {
         
         isRemarksFiltered = !isRemarksFiltered
+        myRemarksBtn.isSelected = !myRemarksBtn.isSelected
         
         filterRemarks(byUser: isRemarksFiltered)
         plotRemarksOnMap(remarks: filteredRemarksArr)
@@ -138,7 +150,7 @@ class MapViewController: UIViewController {
         
         remarksTableView.isHidden = !remarksTableView.isHidden
         remarksTableView.reloadData()
-        plotRemarksOnMap(remarks: mapViewModel.remarksArray)
+        plotRemarksOnMap(remarks: filteredRemarksArr)
     }
     
     func setMapRegion(location: CLLocationCoordinate2D, distance: CLLocationDistance) {
@@ -166,7 +178,17 @@ class MapViewController: UIViewController {
         )
 
         if(remarks.count > 0){
-            let coordinate = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
+            
+            let coordinate: CLLocationCoordinate2D
+            
+            // Zoom to map region based on users current location if available.
+            if let curLoc = userCurrentLocation {
+                
+                coordinate = CLLocationCoordinate2D.init(latitude: curLoc.latitude, longitude: curLoc.longitude)
+            }
+            else{
+                coordinate = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
+            }
             setMapRegion(location: coordinate, distance: 3000)
         }
         
@@ -191,7 +213,7 @@ class MapViewController: UIViewController {
         mapView.addAnnotation(annotation!)
         mapView.selectAnnotation(annotation!, animated: true)
         
-        setMapRegion(location: CLLocationCoordinate2D.init(latitude: remark.latitude, longitude: remark.longitude), distance: 2000)
+        setMapRegion(location: CLLocationCoordinate2D.init(latitude: remark.latitude, longitude: remark.longitude), distance: 3000)
 
     }
 }
@@ -233,40 +255,41 @@ extension MapViewController: MKMapViewDelegate {
         if let annotation = annotation as? AnnotationCustomModel {
 
             var identifier = ""
-            var annotationColor: UIColor? = nil
+            var pinImage: UIImage? = nil
 
             // Determine the annotation color based on the conditions
             if(annotation.remark.user.username.caseInsensitiveCompare(currentUser!.username) == .orderedSame){
                 identifier = StringConstants.LoggedInUserRemark
-                annotationColor = UIColor.red
+                pinImage = UIImage.init(named: "userPin")
             }
             else {
                 identifier = StringConstants.OtherUserRemark
-                annotationColor =  UIColor.blue
+                pinImage = UIImage.init(named: "otherUserPin")
             }
-
-           
-            var view: MKMarkerAnnotationView
             
-            if let dequeuedView  = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView  {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                #warning("add custom image")
-                view.markerTintColor = annotationColor
-                view.animatesWhenAdded = true
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: 0, y: -2)
-                view.rightCalloutAccessoryView =   UIView.init()
-                view.rightCalloutAccessoryView?.tintColor = annotationColor
-                view.centerOffset = CGPoint(x: 0, y: -15)
+            var annotationView: MKAnnotationView?
+            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
 
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView?.canShowCallout = true
             }
-            return view
+            else {
+                annotationView?.annotation = annotation
+            }
+            
+//            let size = CGSize(width: 50, height: 50)
+//                    UIGraphicsBeginImageContext(size)
+//                    pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+//            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            annotationView?.image = pinImage
+            annotationView?.calloutOffset = CGPoint(x: 0.0, y: 0.0)
+
+            return annotationView
         }
         return nil
     }
+    
 }
 
 extension MapViewController: RemarksDelegates {
@@ -310,12 +333,9 @@ extension MapViewController: RemarksDelegates {
                     username.contains(lowercaseSearchText) ||
                     userRemark.contains(lowercaseSearchText)
                 }
-//            isRemarksFiltered = true
         }
         else {
-            
-//            isRemarksFiltered = false
-            filteredArr = mapViewModel.remarksArray
+                filteredArr = mapViewModel.remarksArray
         }
         
         filteredRemarksArr = filteredArr.filter({ (remark) -> Bool in
@@ -361,16 +381,3 @@ extension MapViewController: UITableViewDataSource {
     }
 }
 
-//MARK: UISearchResultsUpdating protocol implementation
-
-//extension MapViewController: UISearchResultsUpdating {
-//
-//    /**
-//     Called when the search bar's text or scope has changed or when the search bar becomes first responder.
-//    */
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//        //Search based on text entered
-//        landmarkViewModel.filterContentForSearchText(searchController.searchBar.text!)
-//    }
-//}

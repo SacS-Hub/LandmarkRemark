@@ -32,6 +32,5 @@ struct StringConstants {
     //Map View
     static let LoggedInUserRemark = "UserRemark"
     static let OtherUserRemark = "OtherRemark"
-    static let MAP_REGION_DISTANCE = 3000
         
 }

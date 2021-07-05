@@ -29,6 +29,8 @@
 		1CD8464A2690D8AF00B2DAF3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD846492690D8AF00B2DAF3 /* Utils.swift */; };
 		1CD8464C2690ECB800B2DAF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464B2690ECB800B2DAF3 /* Constants.swift */; };
 		1CD8464E2691DAFE00B2DAF3 /* RemarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */; };
+		1CE8BF142693143100F8ECFA /* CustomFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE8BF132693143100F8ECFA /* CustomFirebaseViewController.swift */; };
+		1CE8BF162693235F00F8ECFA /* CustomFirebaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE8BF152693235F00F8ECFA /* CustomFirebaseViewController.xib */; };
 		7B1C34376131D90013547A77 /* Pods_Landmark_RemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81D1FCAD1CEBC5162720A88 /* Pods_Landmark_RemarkTests.framework */; };
 		8E0F24C59A16BB9EA3C45B81 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CD6AEF9C2372FF40FB9083 /* Pods_Landmark_Remark_Landmark_RemarkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		1CD846492690D8AF00B2DAF3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1CD8464B2690ECB800B2DAF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkTableViewCell.swift; sourceTree = "<group>"; };
+		1CE8BF132693143100F8ECFA /* CustomFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFirebaseViewController.swift; sourceTree = "<group>"; };
+		1CE8BF152693235F00F8ECFA /* CustomFirebaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomFirebaseViewController.xib; sourceTree = "<group>"; };
 		349997EEC868149BA956186C /* Pods-Landmark Remark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark Remark.debug.xcconfig"; path = "Target Support Files/Pods-Landmark Remark/Pods-Landmark Remark.debug.xcconfig"; sourceTree = "<group>"; };
 		447F34C647A39D997A6282DE /* Pods-Landmark RemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark RemarkTests.release.xcconfig"; path = "Target Support Files/Pods-Landmark RemarkTests/Pods-Landmark RemarkTests.release.xcconfig"; sourceTree = "<group>"; };
 		652A7A12DE51D5A8871C8DDB /* Pods_Landmark_Remark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmark_Remark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,8 @@
 				1CD84639268E79AC00B2DAF3 /* LoginViewController.swift */,
 				1CD84640268FB44100B2DAF3 /* MapViewController.swift */,
 				1CD8464D2691DAFE00B2DAF3 /* RemarkTableViewCell.swift */,
+				1CE8BF132693143100F8ECFA /* CustomFirebaseViewController.swift */,
+				1CE8BF152693235F00F8ECFA /* CustomFirebaseViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA25AAE268CAFF7006D1808 /* LaunchScreen.storyboard in Resources */,
+				1CE8BF162693235F00F8ECFA /* CustomFirebaseViewController.xib in Resources */,
 				1CD8462C268E634700B2DAF3 /* GoogleService-Info.plist in Resources */,
 				1CA25AAB268CAFF7006D1808 /* Assets.xcassets in Resources */,
 				1CA25AA9268CAFF6006D1808 /* Main.storyboard in Resources */,
@@ -513,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE8BF142693143100F8ECFA /* CustomFirebaseViewController.swift in Sources */,
 				1CD8463A268E79AC00B2DAF3 /* LoginViewController.swift in Sources */,
 				1CD84637268E797E00B2DAF3 /* UserModel.swift in Sources */,
 				1CA25AA2268CAFF6006D1808 /* AppDelegate.swift in Sources */,

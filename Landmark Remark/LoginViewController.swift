@@ -9,11 +9,12 @@
 import UIKit
 import FirebaseUI
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController  {
 
     @IBOutlet weak var usernameTxtFld: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
+    // Reference to Login View model
     var loginViewModel: LoginViewModel!
     
     // Reference to Firebase Auth
@@ -22,7 +23,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        usernameTxtFld.becomeFirstResponder()
         loginViewModel = LoginViewModel()
         
         self.authUI = FUIAuth.defaultAuthUI()
@@ -35,8 +35,14 @@ class LoginViewController: UIViewController {
     func presentFirebaseLoginUI() {
         
         guard let fAuthUI = self.authUI else {return}
-        self.authUI?.providers = [FUIGoogleAuth.init(authUI: fAuthUI), FUIEmailAuth()]
+        self.authUI?.providers = [
+            FUIGoogleAuth.init(authUI: fAuthUI),
+            FUIFacebookAuth.init(authUI: fAuthUI),
+            FUIEmailAuth(),
+            FUIPhoneAuth(authUI: fAuthUI)]
+        
         self.view.addSubview(fAuthUI.authViewController().view)
+        
 //        self.show(fAuthUI.authViewController(), sender: nil)
     }
 
@@ -73,15 +79,16 @@ extension LoginViewController: FUIAuthDelegate {
                 }
                 
             })
-        
-//        UserHelper.login(user) { [weak self] (user) in
-//            if let _ = user, let strongSelf = self {
-//                strongSelf.presentViewController(true)
-//            }
         }
+        
+    }
+    
+    func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
 
-        
-        
+        // A custom FUIAuthPickerViewController subclass to customise the UI of Firebase Login View
+        return CustomFirebaseAuthViewController(nibName: "CustomFirebaseViewController",
+                                     bundle: Bundle.main,
+                                     authUI: authUI)
         
     }
 }
