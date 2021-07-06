@@ -41,7 +41,7 @@ open class Utilities {
         let subtitleFont =  UIFont(name: "Arial", size: 12)
         
         let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font :  titleFont as Any, NSAttributedString.Key.foregroundColor : UIColor.black])
-        let attributedMessage = NSAttributedString(string: subtitle, attributes: [NSAttributedString.Key.font : subtitleFont as Any, NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        let attributedMessage = NSAttributedString(string: subtitle, attributes: [NSAttributedString.Key.font : subtitleFont as Any, NSAttributedString.Key.foregroundColor : UIColor.gray])
         
         let alert = UIAlertController(title: "", message: "",  preferredStyle: .alert)
         

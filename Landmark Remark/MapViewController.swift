@@ -368,6 +368,8 @@ extension MapViewController: RemarksDelegates {
         Utilities.getActivityIndicator(view: self.view).stopAnimating()
         self.present(Utilities.commonInformationAlert(title: StringConstants.AlertInformation, message: StringConstants.RemarkSaveSuccess), animated: true, completion: nil)
         
+        filteredRemarksArr.append(remark)
+        
         // Show saved remark on map and list/table view
         showAddedRemarkOnMap(remark: remark)
         remarksTableView.reloadData()

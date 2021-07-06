@@ -1,6 +1,6 @@
 #  Landmark Remark 
 
-An native iOS app based on location tagging where a user can tag a remark/note at their current location. This added remark/note will be visible to self and all the other users. 
+An native iOS app based on location tagging where a user can tag a remark/note at their current location. The added remark/note will be visible to self and all the other users. 
 
 Below are few of the high level features:
 
@@ -34,8 +34,8 @@ Each user story were broken into tasks to better plan the development.
  4. Backend support: Firebase Auth, Firebase UI and Firebase Database.
 
 ## Efforts
-It took a total of 15-17 hours to develop this applicaton which involves below:
-1. Analysis and solutionising - Appox. 2 hrs
+It took a total of 15-17 hours to develop this applicaton which can be categorised as below:
+1. Analysis and solutionizing - Appox. 2 hrs
 2. Integrating Firebase components - Approx. 2 hrs
 3. UI development - Approx. 4hrs
 4. Firebase service integration for login, database etc. - Approx. 3hrs
@@ -52,7 +52,7 @@ There are few limitiation with this solution
 3. Annonation representation could have been improved by providing more color option 
 4. Login via FB will only work on simulator as the app requires appstore approval for live FB login.
 5. Login via phone number works only for hard code phone numbers due to free subscription
-#### use +97430092324 and 455321 as verification code
+#### Please use +97430092324 and 455321 as verification code 
 
 Although the app covers all the 5 backlog user stories below good-to-have feature was not achieved due to time constraints.
 1. A small information icon ("i") in Annotation view to show multiline remark/note in a secondary view. However, this remark/note can be viewed in full in list/table view.
