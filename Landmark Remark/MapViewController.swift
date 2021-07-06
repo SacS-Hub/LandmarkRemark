@@ -223,12 +223,6 @@ class MapViewController: UIViewController {
         mapView?.addAnnotations(
             remarks.map { (remark) -> AnnotationCustomModel in return AnnotationCustomModel.init(remark: remark)!
                 
-                #warning("calculate distance from current location")
-//                let remarkLocation = CLLocation(latitude: remark.latitude, longitude: remark.longitude)
-//
-//                // Calculate distance of landmark from currrent location
-//                let distanceFromUser = remarkLocation.distance(from: userCurrentLocation.l)
-//                remark.distance = Utilities.
             }
         )
 
