@@ -15,19 +15,21 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var remarksTableView: UITableView!
+    @IBOutlet weak var listBarBtn: UIBarButtonItem!
+    @IBOutlet weak var myRemarksBtn: UIButton!
+    
     var mapViewModel : MapViewModel!
     var userCurrentLocation: CLLocationCoordinate2D?
     var isLocationUpdating = false
     var currentUser: User?
-    @IBOutlet weak var remarksTableView: UITableView!
     
-    @IBOutlet weak var listBarBtn: UIBarButtonItem!
     var isRemarksFiltered: Bool = false
-//    var isRemarksFilteredByUser: Bool = false
     
-    @IBOutlet weak var myRemarksBtn: UIButton!
+    // To store all the filtered remarks.
     private var filteredRemarksArr: [Remark] = []
     
+    // Property observer to assign delegate once location manager is set/initialised
     private var locationManager: CLLocationManager? {
         didSet {
             self.locationManager?.delegate = self
@@ -41,7 +43,6 @@ class MapViewController: UIViewController {
         mapViewModel.delegate = self
         
         // Setup search bar
-        
         searchBar.enablesReturnKeyAutomatically = false
         searchBar.keyboardType = .default
         searchBar.autocorrectionType = .no
@@ -59,14 +60,28 @@ class MapViewController: UIViewController {
         mapViewModel.getAllRemarks()
     }
     
+    /*
+     Method      : configureLocationManager
+     Description : Initialise CLLocation manager to get current location updates
+     parameter   : none
+     Return      : none
+     */
     func configureLocationManager(){
         self.locationManager = CLLocationManager()
         self.locationManager?.requestWhenInUseAuthorization()
     }
     
+    // MARK: Actions
     
+    /*
+     Method      : logoutAction
+     Description : Logout the user
+     parameter   : sender
+     Return      : none
+     */
     @IBAction func logoutAction(_ sender: Any) {
         
+        // Display logout confirmation alert
         let alert = UIAlertController.init(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
@@ -80,44 +95,76 @@ class MapViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    /*
+     Method      : addRemark
+     Description : Add remark at a particular location
+     parameter   : sender
+     Return      : none
+     */
     @IBAction func addRemark(_ sender: Any) {
         
+        // Show UI to enter remarks
         configureRemarkView(userTitle:"Hi \(currentUser!.username)!", subTitle: StringConstants.AddRemarkSubtitle, remarkId: "")
     }
     
+    /*
+     Method      : showMyRemarksAction
+     Description : Show remarkds added by the logged in user
+     parameter   : sender
+     Return      : none
+     */
     @IBAction func showMyRemarksAction(_ sender: Any) {
         
         isRemarksFiltered = !isRemarksFiltered
         myRemarksBtn.isSelected = !myRemarksBtn.isSelected
+        
+        // Filter remarks for current user
         
         filterRemarks(byUser: isRemarksFiltered)
         plotRemarksOnMap(remarks: filteredRemarksArr)
         remarksTableView.reloadData()
     }
     
+    /*
+     Method      : showRemarkList
+     Description : Show remarks in list format i.e. table
+     parameter   : sender
+     Return      : none
+     */
+
+    @IBAction func showRemarkList(_ sender: Any) {
+        
+        remarksTableView.isHidden = !remarksTableView.isHidden
+        remarksTableView.reloadData()
+        plotRemarksOnMap(remarks: filteredRemarksArr)
+    }
+
+    
+    /*
+     Method      : configureRemarkView
+     Description : Configure alert view to display textfield to allow user to save
+                   remark at a location
+     parameter   : userTitle, subTitle, remarkId
+     Return      : none
+     */
+
     func configureRemarkView (userTitle: String, subTitle: String, remarkId: String = "") {
         
-            // Stop updating location while adding a remark at current Lat/Long
-            stopLocationUpdates()
-            Utilities.getActivityIndicator(view: self.view).startAnimating()
-            
-            let alertController = Utilities.createCustomAlertController(title: userTitle, subtitle: subTitle)
-            
-            //Configure save action
+        
+        // Stop updating location while adding a remark at current Lat/Long
+        stopLocationUpdates()
+        Utilities.getActivityIndicator(view: self.view).startAnimating()
+        
+        let alertController = Utilities.createCustomAlertController(title: userTitle, subtitle: subTitle)
+        
+        //Configure save action
         let saveAction = UIAlertAction(title: StringConstants.SaveAlertAction, style: .default) { (_) in
             let remarkTextField = alertController.textFields![0] as UITextField
-
-//            if isUpdating {
-//
-//                self.landmarkViewModel.updateCurrentLandmarkRemark(remarkId, newRemark: remarkTextField.text!)
-//
-//            }
-//            else {
             
-                let remark = Remark(remarkId: remarkId, message: remarkTextField.text!, latitude: self.userCurrentLocation!.latitude, longitude: self.userCurrentLocation!.longitude, date: Utilities.dateToString(date: Date()), distance: 0.0, user: self.currentUser!)
+            let remark = Remark(remarkId: remarkId, message: remarkTextField.text!, latitude: self.userCurrentLocation!.latitude, longitude: self.userCurrentLocation!.longitude, date: Utilities.dateToString(date: Date()), distance: 0.0, user: self.currentUser!)
             
+            // Add user remark to firebase DB
             self.mapViewModel.addUserRemark(landmarkRemark: remark)
-//            }
             
         }
         saveAction.isEnabled = false
@@ -135,7 +182,8 @@ class MapViewController: UIViewController {
         textField.autocapitalizationType = .sentences
         textField.returnKeyType = .done
         textField.clearButtonMode = .whileEditing
-            
+        
+        // Enable save button once text is entered
         NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main) { (notification) in
                 saveAction.isEnabled = textField.text != ""
             }
@@ -146,25 +194,32 @@ class MapViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func showRemarkList(_ sender: Any) {
-        
-        remarksTableView.isHidden = !remarksTableView.isHidden
-        remarksTableView.reloadData()
-        plotRemarksOnMap(remarks: filteredRemarksArr)
-    }
     
+    /*
+     Method      : setMapRegion
+     Description : Set the visible map region based on location
+     parameter   : location,distance
+     Return      : none
+     */
     func setMapRegion(location: CLLocationCoordinate2D, distance: CLLocationDistance) {
         let region:MKCoordinateRegion = MKCoordinateRegion(center: location,latitudinalMeters: distance, longitudinalMeters: distance)
             mapView.setRegion(region,animated:true)
                 
     }
     
+    /*
+     Method      : plotRemarksOnMap
+     Description : Show all the annotations with remark information on the map
+     parameter   : remarks
+     Return      : none
+     */
     func plotRemarksOnMap (remarks: [Remark]) {
         
         if let displayedAnnotations = mapView?.annotations {
             mapView?.removeAnnotations(displayedAnnotations)
         }
         
+        // Provide map with custom Annotation model
         mapView?.addAnnotations(
             remarks.map { (remark) -> AnnotationCustomModel in return AnnotationCustomModel.init(remark: remark)!
                 
@@ -179,34 +234,43 @@ class MapViewController: UIViewController {
 
         if(remarks.count > 0){
             
-            let coordinate: CLLocationCoordinate2D
-            
-            // Zoom to map region based on users current location if available.
-            if let curLoc = userCurrentLocation {
-                
-                coordinate = CLLocationCoordinate2D.init(latitude: curLoc.latitude, longitude: curLoc.longitude)
-            }
-            else{
-                coordinate = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
-            }
+            // Zoom to map region based on remark location
+            let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
             setMapRegion(location: coordinate, distance: 3000)
         }
         
     }
     
+    /*
+     Method      : startLocationUpdates
+     Description : Start fetching user location updates
+     parameter   : remarks
+     Return      : none
+     */
     func startLocationUpdates() {
         isLocationUpdating = true
         locationManager?.startUpdatingLocation()
         mapView.showsUserLocation = true
     }
     
+    /*
+     Method      : stopLocationUpdates
+     Description : Stop fetching user location updates
+     parameter   : remarks
+     Return      : none
+     */
     func stopLocationUpdates() {
         isLocationUpdating = false
         locationManager?.stopUpdatingLocation()
         mapView.showsUserLocation = false
     }
     
-    
+    /*
+     Method      : stopLocationUpdates
+     Description : Stop fetching user location updates
+     parameter   : remarks
+     Return      : none
+     */
     func showAddedRemarkOnMap (remark: Remark) {
         
         let annotation = AnnotationCustomModel.init(remark: remark)
@@ -218,6 +282,7 @@ class MapViewController: UIViewController {
     }
 }
 
+// MARK: CLLocationManager Delegate Methods
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -248,6 +313,7 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
+// MARK: MKMapViewDelegate Delegate Methods
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -257,7 +323,7 @@ extension MapViewController: MKMapViewDelegate {
             var identifier = ""
             var pinImage: UIImage? = nil
 
-            // Determine the annotation color based on the conditions
+            // Determine the annotation image based on the current logged in user
             if(annotation.remark.user.username.caseInsensitiveCompare(currentUser!.username) == .orderedSame){
                 identifier = StringConstants.LoggedInUserRemark
                 pinImage = UIImage.init(named: "userPin")
@@ -278,10 +344,6 @@ extension MapViewController: MKMapViewDelegate {
                 annotationView?.annotation = annotation
             }
             
-//            let size = CGSize(width: 50, height: 50)
-//                    UIGraphicsBeginImageContext(size)
-//                    pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-//            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
             annotationView?.image = pinImage
             annotationView?.calloutOffset = CGPoint(x: 0.0, y: 0.0)
 
@@ -292,18 +354,33 @@ extension MapViewController: MKMapViewDelegate {
     
 }
 
+// MARK: RemarksDelegates Methods
 extension MapViewController: RemarksDelegates {
     
+    /*
+     Method      : remarkSavedWithSuccess
+     Description : Callback method after remark saved successfully to firebase db
+     parameter   : remark
+     Return      : none
+     */
     func remarkSavedWithSuccess(_ remark: Remark) {
         
         Utilities.getActivityIndicator(view: self.view).stopAnimating()
         self.present(Utilities.commonInformationAlert(title: StringConstants.AlertInformation, message: StringConstants.RemarkSaveSuccess), animated: true, completion: nil)
         
-        // Show saved remark on map and list view
+        // Show saved remark on map and list/table view
         showAddedRemarkOnMap(remark: remark)
         remarksTableView.reloadData()
+        startLocationUpdates()
     }
             
+    /*
+     Method      : remarksFetchedWithSuccess
+     Description : Callback method after all remarks are retrieved successfully from
+                   firebase db
+     parameter   : remark
+     Return      : none
+     */
     func remarksFetchedWithSuccess(_ status: Bool) {
         Utilities.getActivityIndicator(view: self.view).stopAnimating()
         
@@ -312,11 +389,24 @@ extension MapViewController: RemarksDelegates {
         plotRemarksOnMap(remarks: filteredRemarksArr)
     }
     
+    /*
+     Method      : operationFailedWithError
+     Description : Callback method if any error in Fierebase DB operations
+     parameter   : message
+     Return      : none
+     */
     func operationFailedWithError(_ message: String) {
         Utilities.getActivityIndicator(view: self.view).stopAnimating()
         self.present(Utilities.commonInformationAlert(title: StringConstants.AlertInformation, message: message), animated: true, completion: nil)
+        startLocationUpdates()
     }
 
+    /*
+     Method      : filterRemarks
+     Description : Filter the remarks based on search (also for remarks of current user)
+     parameter   : byUser
+     Return      : none
+     */
     func filterRemarks(byUser: Bool) {
         
         var filteredArr: [Remark] = []
@@ -359,7 +449,23 @@ extension MapViewController: UISearchBarDelegate {
         filterRemarks(byUser: isRemarksFiltered)
         plotRemarksOnMap(remarks: filteredRemarksArr)
         remarksTableView.reloadData()
+        stopLocationUpdates()
+        
+        if (searchText.isEmpty) {
+            searchBar.resignFirstResponder()
+            }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        
+        if (searchBar.text == "")
+        {
+            startLocationUpdates()
+        }
+    }
+    
     
 }
 

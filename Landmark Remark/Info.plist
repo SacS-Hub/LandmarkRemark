@@ -26,16 +26,25 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.564104857037-fddf3utcurhrr23n7oa0ls7sls2a7a1q</string>
-				<string>fb209340044408285</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb209340044408285</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>209340044408285</string>
+	<key>FacebookClientToken</key>
+	<string>Landmark Remark</string>
+	<key>FacebookDisplayName</key>
+	<string>Landmark Remark</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -70,8 +79,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -80,11 +87,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>FacebookAppID</key>
-	<string>209340044408285</string>
-	<key>Lanmark Remark</key>
-	<string>CLIENT-TOKEN</string>
-	<key>FacebookDisplayName</key>
-	<string>Lanmark Remark</string>
 </dict>
 </plist>

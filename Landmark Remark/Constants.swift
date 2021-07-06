@@ -11,7 +11,7 @@ import UIKit
 
 struct StringConstants {
     
-    // Firebase Constanrs
+    // Firebase Constants
     static let FirebaseUserDBRef = "landmarkUsers"
     static let FirebaseRemarkDBRef = "landmarkRemarks"
     
@@ -19,7 +19,7 @@ struct StringConstants {
     static let AlertInformation = "Information"
     static let AddRemarkSubtitle = "Enter a short remark at this location"
     static let AlertTextfieldPlaceholder = "Please type here..."
-    static let OkAlertAction = "Cancel"
+    static let OkAlertAction = "Ok"
     static let SaveAlertAction = "Save"
     static let CancelAlertAction = "Cancel"
     static let RemarkSaveSuccess = "User Remark added successfully"

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Model structure for user
 struct User {
     
     let userId: String

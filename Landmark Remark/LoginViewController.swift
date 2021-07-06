@@ -27,11 +27,18 @@ class LoginViewController: UIViewController  {
         
         self.authUI = FUIAuth.defaultAuthUI()
         self.authUI?.delegate = self;
-        
+        Auth.auth().settings?.isAppVerificationDisabledForTesting = true
+
         presentFirebaseLoginUI()
         
     }
     
+    /*
+     Method      : presentFirebaseLoginUI
+     Description : Present Firebase Auth controller as login for (Google,FB,Email,Phone)
+     parameter   : none
+     Return      : none
+     */
     func presentFirebaseLoginUI() {
         
         guard let fAuthUI = self.authUI else {return}
@@ -40,35 +47,49 @@ class LoginViewController: UIViewController  {
             FUIFacebookAuth.init(authUI: fAuthUI),
             FUIEmailAuth(),
             FUIPhoneAuth(authUI: fAuthUI)]
-        
+
         self.view.addSubview(fAuthUI.authViewController().view)
         
-//        self.show(fAuthUI.authViewController(), sender: nil)
     }
 
-    @IBAction func loginUserAction(_ sender: Any) {
-        
-    }
-    
+    /*
+     Method      : prepareForSegue: sender:
+     Description : Show map view after successful login
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowMapView"{
                 let mapViewCtlr = segue.destination as! MapViewController
                 mapViewCtlr.mapViewModel = MapViewModel()
-            mapViewCtlr.currentUser = loginViewModel.currentLandmarkUser
+                mapViewCtlr.currentUser = loginViewModel.currentLandmarkUser
             }
     }
 }
 
+// MARK: FUIAuth Delegate Methods
 extension LoginViewController: FUIAuthDelegate {
     
+    /*
+     Method      : authUI:didSignInWithAuthDataResult:error:
+     Description : After successful login initialise User Model and save in Firebase DB
+     */
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
                 
         print("called")
         
         if let user = authUI.auth?.currentUser {
             
-            let landmarkUser:User = User.init(userId: user.uid, username: user.displayName!)
+            var username: String
+            
+            if let displayname = user.displayName {
+                username = displayname
+            }
+            else
+            {
+                username = user.phoneNumber ?? ""
+            }
+            
+            let landmarkUser:User = User.init(userId: user.uid, username: username)
             
             loginViewModel.login(landmarkUser: landmarkUser, completion: {[weak self] landmark in
                 guard let self = self else {return}
@@ -80,9 +101,12 @@ extension LoginViewController: FUIAuthDelegate {
                 
             })
         }
-        
     }
     
+    /*
+     Method      : authPickerViewControllerForAuthUI
+     Description : Show custom login view
+     */
     func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
 
         // A custom FUIAuthPickerViewController subclass to customise the UI of Firebase Login View
@@ -91,5 +115,6 @@ extension LoginViewController: FUIAuthDelegate {
                                      authUI: authUI)
         
     }
+    
 }
 

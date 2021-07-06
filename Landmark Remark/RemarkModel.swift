@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Model structure for Remark
 struct Remark {
     
     let remarkId: String?

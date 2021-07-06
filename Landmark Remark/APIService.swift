@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
+// Abstraction for all the service call in the app
 protocol FirebaseAPIServiceProtocol {
     
     func fetchLandmarkUsers(completion: @escaping (Result<[User], FirebaseDBError>) -> Void )
@@ -25,14 +26,19 @@ enum FirebaseDBError: Error {
 
 class FirebaseAPIService: FirebaseAPIServiceProtocol {
     
+    // Initialise Firebase DB references
     var dbUserRef: DatabaseReference = Database.database().reference(withPath: StringConstants.FirebaseUserDBRef)
     var dbRemarkRef: DatabaseReference = Database.database().reference(withPath: StringConstants.FirebaseRemarkDBRef)
 
-    
+    /*
+     Method      : fetchLandmarkUsers
+     Description : Fetch all the users from Firebase Database
+     parameter   : Completion handler to notify finished operation
+     Return      : none
+     */
     func fetchLandmarkUsers(completion: @escaping (Result<[User], FirebaseDBError>) -> Void ){
         
         
-//        dbRef.observe(.value, with: { (snapshot) in
         dbUserRef.observeSingleEvent (of: .value, with: { snapshot in
             
             guard snapshot.value != nil else { completion(.failure(.noData)); return}
@@ -59,6 +65,12 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
         
     }
     
+    /*
+     Method      : saveLandmarkUser
+     Description : Save new logged in user to Firebase Database
+     parameter   : User model to save
+     Return      : none
+     */
     func saveLandmarkUser(landmarkUser: User, completion: @escaping (Result<User, Error>) -> Void ){
         
         let  child = self.dbUserRef.childByAutoId()
@@ -70,6 +82,12 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
         }
     }
     
+    /*
+     Method      : fetchAllRemarksFromFirebase
+     Description : Fetch all the remarks from Firebase Database
+     parameter   : Completion handler to notify finished operation
+     Return      : none
+     */
     func fetchAllRemarksFromFirebase(completion: @escaping (Result<[Remark], FirebaseDBError>) -> Void ) {
         
         dbRemarkRef.observeSingleEvent (of: .value, with: { snapshot in
@@ -97,6 +115,12 @@ class FirebaseAPIService: FirebaseAPIServiceProtocol {
         
     }
     
+    /*
+     Method      : saveUserRemark
+     Description : Save user remarks to Firebase Database
+     parameter   : Remark model to save
+     Return      : none
+     */
     func saveUserRemark(landmarkRemark: Remark, completion: @escaping (Result<Remark, Error>) -> Void ) {
         
         let  child = self.dbRemarkRef.childByAutoId()

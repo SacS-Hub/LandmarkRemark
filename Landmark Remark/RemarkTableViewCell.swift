@@ -19,6 +19,12 @@ class RemarkTableViewCell: UITableViewCell {
     
     static let cellId = "RemarkTableViewCellID"
     
+    /*
+     Method      : setCellContents
+     Description : Assign values to cell elements
+     parameter   : remark
+     Return      : none
+     */
     func setCellContents(remark: Remark){
         
 //        guard let username = remark.user.username,
