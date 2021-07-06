@@ -47,7 +47,7 @@ It took a total of 15-17 hours to develop this applicaton which can be categoris
 ## Known Limitations
 
 There are few limitiation with this solution
-1. It has few Firebase related warning.
+1. It has few Cocoapods and Firebase related warning.
 2. More unit test cases could have been written
 3. Annonation representation could have been improved by providing more color option 
 4. Login via FB will only work on simulator as the app requires appstore approval for live FB login.
