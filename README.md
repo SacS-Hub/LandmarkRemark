@@ -51,8 +51,8 @@ There are few limitiation with this solution
 2. More unit test cases could have been written
 3. Annonation representation could have been improved by providing more color option 
 4. Login via FB will only work on simulator as the app requires appstore approval for live FB login.
-5. Login via phone number works only for hard code phone numbers due to free subscription
-#### Please use +97430092324 and 455321 as verification code 
+5. Login via phone number works only for hard coded phone numbers. Refer below notes for sample phone numbers 
+ 
 
 Although the app covers all the 5 backlog user stories below good-to-have feature was not achieved due to time constraints.
 1. A small information icon ("i") in Annotation view to show multiline remark/note in a secondary view. However, this remark/note can be viewed in full in list/table view.
@@ -61,5 +61,11 @@ Although the app covers all the 5 backlog user stories below good-to-have featur
 4. Animated transition while switching between map and list/table view 
 5. Firebase Crashlytics could have been leveraged to get insight of app issues and crashes
 
-
+## Note
+    1. Please use following phone numbers to test Sign in with phone feature 
+       a. +1 232-323-2323 and 123456 as verification code
+       b. +61-232323232 and 123456 as verification code
+       c. +974-30092324 and 455321 as verification code
+    2. Current logged users remark/note is denoted by RED color annotation/pin.
+    3. Other users remark/note is denoted by BLUE color annotation/pin.
     

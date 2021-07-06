@@ -72,8 +72,8 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20a-dj-9SB">
-                                                    <rect key="frame" x="304" y="6" width="87" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20a-dj-9SB">
+                                                    <rect key="frame" x="295" y="6" width="100" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -81,14 +81,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Q5O-UK-ArJ" firstAttribute="top" secondItem="kxX-jg-AQH" secondAttribute="top" constant="3" id="6nJ-Jh-pa7"/>
-                                                <constraint firstAttribute="trailing" secondItem="20a-dj-9SB" secondAttribute="trailing" constant="20.5" id="G4S-kl-oCR"/>
-                                                <constraint firstItem="Q5O-UK-ArJ" firstAttribute="leading" secondItem="kxX-jg-AQH" secondAttribute="leading" constant="31" id="Gon-DG-7RQ"/>
+                                                <constraint firstItem="20a-dj-9SB" firstAttribute="leading" secondItem="Q5O-UK-ArJ" secondAttribute="trailing" constant="25" id="8BP-wm-KLJ"/>
+                                                <constraint firstItem="Q5O-UK-ArJ" firstAttribute="left" secondItem="kxX-jg-AQH" secondAttribute="left" constant="31" id="Gon-DG-7RQ"/>
+                                                <constraint firstAttribute="right" secondItem="20a-dj-9SB" secondAttribute="right" constant="16" id="O5E-o0-QDS"/>
                                                 <constraint firstItem="BCI-9L-Afa" firstAttribute="top" secondItem="Q5O-UK-ArJ" secondAttribute="top" constant="27.5" id="Pbk-y6-DPQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="Q5O-UK-ArJ" secondAttribute="trailing" constant="141" id="XEc-s7-gUX"/>
-                                                <constraint firstAttribute="trailing" secondItem="BCI-9L-Afa" secondAttribute="trailing" constant="33" id="biF-Jk-Uop"/>
-                                                <constraint firstItem="20a-dj-9SB" firstAttribute="top" secondItem="kxX-jg-AQH" secondAttribute="top" constant="6" id="mub-Ys-Mcp"/>
+                                                <constraint firstItem="20a-dj-9SB" firstAttribute="top" secondItem="kxX-jg-AQH" secondAttribute="top" constant="6" id="UxV-LC-NCo"/>
+                                                <constraint firstAttribute="right" secondItem="Q5O-UK-ArJ" secondAttribute="right" constant="141" id="XEc-s7-gUX"/>
+                                                <constraint firstAttribute="right" secondItem="BCI-9L-Afa" secondAttribute="right" constant="33" id="biF-Jk-Uop"/>
                                                 <constraint firstAttribute="bottom" secondItem="BCI-9L-Afa" secondAttribute="bottom" constant="4.5" id="sQv-Sc-7P6"/>
-                                                <constraint firstItem="BCI-9L-Afa" firstAttribute="leading" secondItem="kxX-jg-AQH" secondAttribute="leading" constant="33" id="vDE-Zj-TXd"/>
+                                                <constraint firstItem="BCI-9L-Afa" firstAttribute="top" secondItem="20a-dj-9SB" secondAttribute="bottom" constant="10.5" id="tSE-Tv-E9p"/>
+                                                <constraint firstItem="BCI-9L-Afa" firstAttribute="left" secondItem="kxX-jg-AQH" secondAttribute="left" constant="33" id="vDE-Zj-TXd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -183,31 +185,8 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="82.366071428571431"/>
         </scene>
-        <!--My View Controller-->
-        <scene sceneID="QIC-G8-pY9">
-            <objects>
-                <viewController storyboardIdentifier="CustomFirebaseAuthID" id="R4g-23-Z6a" customClass="MyViewController" customModule="Landmark_Remark" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EsF-aF-iR0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="CeJ-oR-j6c">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="j3V-qf-Zh3"/>
-                        <color key="backgroundColor" red="0.0" green="0.85877937769938362" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.0" green="0.85882352941176465" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3vq-4F-nTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="764.73214285714278"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="LoginIcon" width="341.33334350585938" height="341.33334350585938"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="note" catalog="system" width="128" height="106"/>
         <image name="note.text" catalog="system" width="128" height="106"/>

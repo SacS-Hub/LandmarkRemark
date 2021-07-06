@@ -37,7 +37,7 @@ open class Utilities {
      */
     static func createCustomAlertController(title: String, subtitle: String) -> UIAlertController {
         
-        let titleFont =  UIFont(name: "Arial", size: 16)!
+        let titleFont =  UIFont(name: "Arial", size: 14)!
         let subtitleFont =  UIFont(name: "Arial", size: 12)
         
         let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font :  titleFont as Any, NSAttributedString.Key.foregroundColor : UIColor.black])
@@ -105,39 +105,6 @@ open class Utilities {
     static func trimSpaceFromString (string: String) -> String {
         
         return string.components(separatedBy: .whitespaces).joined()
-    }
-    
-    #warning("remove this if distance non implemented")
-    /*
-     Method      : getDistanceString
-     Description : Utilitiy to convert distance from numbers into string
-     parameter   : Double
-     Return      : String
-     */
-    static func getDistanceString(distance: Double) -> String {
-        
-        // If distance less than 1km then display in meters
-        if distance < 1000.0 {
-            
-            if distance <= 50.0 {
-                return "less than 20 m away"
-            }
-            else if distance <= 100.0 {
-                return "less than 100 m away"
-            }
-            else if distance <= 500.0 {
-                return "less than 500 m away"
-            }
-            else {
-                // If more than 500m, show the actual distance in meters
-                return "\(Double(round(10 * distance) / 10)) m away"
-            }
-        }
-        else {
-            //Show in km
-            return "\(Double(round(10 * (distance/1000)) / 10)) km away"
-        }
-        
     }
     
 }

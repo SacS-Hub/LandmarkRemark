@@ -25,6 +25,7 @@ class MapViewController: UIViewController {
     var currentUser: User?
     
     var isRemarksFiltered: Bool = false
+    var isSearching: Bool = false
     
     // To store all the filtered remarks.
     private var filteredRemarksArr: [Remark] = []
@@ -54,6 +55,7 @@ class MapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        startLocationUpdates()
         mapView.showsUserLocation = true
         
         // Get all the user's remarks
@@ -103,6 +105,7 @@ class MapViewController: UIViewController {
      */
     @IBAction func addRemark(_ sender: Any) {
         
+        searchBar.resignFirstResponder()
         // Show UI to enter remarks
         configureRemarkView(userTitle:"Hi \(currentUser!.username)!", subTitle: StringConstants.AddRemarkSubtitle, remarkId: "")
     }
@@ -114,6 +117,8 @@ class MapViewController: UIViewController {
      Return      : none
      */
     @IBAction func showMyRemarksAction(_ sender: Any) {
+        
+        searchBar.resignFirstResponder()
         
         isRemarksFiltered = !isRemarksFiltered
         myRemarksBtn.isSelected = !myRemarksBtn.isSelected
@@ -134,6 +139,7 @@ class MapViewController: UIViewController {
 
     @IBAction func showRemarkList(_ sender: Any) {
         
+        searchBar.resignFirstResponder()
         remarksTableView.isHidden = !remarksTableView.isHidden
         remarksTableView.reloadData()
         plotRemarksOnMap(remarks: filteredRemarksArr)
@@ -229,7 +235,18 @@ class MapViewController: UIViewController {
         if(remarks.count > 0){
             
             // Zoom to map region based on remark location
-            let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
+            let coordinate: CLLocationCoordinate2D
+                        
+            if isSearching  {
+                coordinate = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
+            }
+            else if userCurrentLocation != nil && !isRemarksFiltered{
+                coordinate = CLLocationCoordinate2D.init(latitude: userCurrentLocation!.latitude, longitude: userCurrentLocation!.longitude)
+            }
+            else {
+                coordinate = CLLocationCoordinate2D.init(latitude: remarks[0].latitude, longitude: remarks[0].longitude)
+            }
+            
             setMapRegion(location: coordinate, distance: 3000)
         }
         
@@ -383,6 +400,7 @@ extension MapViewController: RemarksDelegates {
         filterRemarks(byUser: isRemarksFiltered)
         // Show all the remarks on the map
         plotRemarksOnMap(remarks: filteredRemarksArr)
+        
     }
     
     /*
@@ -407,6 +425,9 @@ extension MapViewController: RemarksDelegates {
         
         var filteredArr: [Remark] = []
         if let text = searchBar.text, !text.isEmpty{
+            
+            isSearching = true
+            
             filteredArr = mapViewModel.remarksArray.filter {
                 (remark) -> Bool in
                 
@@ -421,6 +442,7 @@ extension MapViewController: RemarksDelegates {
                 }
         }
         else {
+                isSearching = false
                 filteredArr = mapViewModel.remarksArray
         }
         
@@ -449,7 +471,8 @@ extension MapViewController: UISearchBarDelegate {
         
         if (searchText.isEmpty) {
             searchBar.resignFirstResponder()
-            }
+            isSearching = false
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -459,6 +482,7 @@ extension MapViewController: UISearchBarDelegate {
         if (searchBar.text == "")
         {
             startLocationUpdates()
+            isSearching = false
         }
     }
     
@@ -469,14 +493,23 @@ extension MapViewController: UISearchBarDelegate {
 extension MapViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return filteredRemarksArr.count
+        
+        if filteredRemarksArr.count == 0 {
+            return 1
+        }
+        return filteredRemarksArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RemarkTableViewCell.cellId, for: indexPath) as! RemarkTableViewCell
     
-            cell.setCellContents(remark: filteredRemarksArr[indexPath.row])
+        if filteredRemarksArr.count == 0 {
+            cell.setNoRemarkCellContent()
+            
+            return cell
+        }
+        cell.setCellContents(remark: filteredRemarksArr[indexPath.row])
 
         return cell
         

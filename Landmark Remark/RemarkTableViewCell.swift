@@ -36,4 +36,17 @@ class RemarkTableViewCell: UITableViewCell {
         self.remarkLbl.text = remark.message
         self.dateLbl.text = remark.date
     }
+    
+    /*
+     Method      : setNoRemarkCellContent
+     Description : Assign default values if there are no remarks/notes added by the user
+     parameter   : none
+     Return      : none
+     */
+    func setNoRemarkCellContent(){
+
+        self.userLbl.text = "No remark(s)/note(s) added by you"
+        self.remarkLbl.text = "Please add a short remark by tapping + button"
+        self.dateLbl.text = ""
+    }
 }
